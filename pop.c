@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
- * f_pop - funtion that prints the top
- * @head: first parameter
- * @counter: line_number
- * Return: return nothing
+ * f_pop - function that prints the top
+ * @head: first param
+ * @counter: lines number
+ * Return: return nothing on succ
 */
 void f_pop(stack_t **head, unsigned int counter)
 {
-	stack_t *h;
+	stack_t *a;
 
 	if (*head == NULL)
 	{
@@ -17,7 +17,7 @@ void f_pop(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	*head = h->next;
-	free(h);
+	a = *head;
+	*head = a->next;
+	free(a);
 }

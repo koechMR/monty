@@ -2,8 +2,8 @@
 /**
  * f_pint - function that pints
  * @head: stack head
- * @counter: line_number
- * Return: returns nothing
+ * @counter: number counter
+ * Return: returns nothing on success
 */
 void f_pint(stack_t **head, unsigned int counter)
 {

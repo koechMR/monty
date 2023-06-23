@@ -2,19 +2,19 @@
 #include <stdio.h>
 #include "monty.h"
 /**
-* main - monty code interpreter
-* @argc: number of arguments
-* @argv: monty file location
-* Return: 0 on success
+* main - entry point of the program
+* @argc: argument count
+* @argv: location
+* Return: return 0 on success
 */
 int main(int argc, char *argv[])
 {
 	char *content;
-	FILE *file;
 	size_t size = 0;
-	ssize_t read_line = 1;
 	stack_t *stack = NULL;
 	unsigned int counter = 0;
+	FILE *file;
+	ssize_t read_line = 1;
 
 	if (argc != 2)
 	{

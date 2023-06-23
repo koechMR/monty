@@ -2,21 +2,21 @@
 /**
  * addnode - fucntion that add node to the head stack
  * @head: first parameter
- * @n: new_value
+ * @n: new value
  * Return: return nothing
 */
 void addnode(stack_t **head, int n)
 {
 
-	stack_t *new_node, *aux;
+	stack_t *new_node, *pg;
 
-	aux = *head;
+	pg = *head;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{ printf("Error\n");
 		exit(0); }
-	if (aux)
-		aux->prev = new_node;
+	if (pg)
+		pg->prev = new_node;
 	new_node->n = n;
 	new_node->next = *head;
 	new_node->prev = NULL;

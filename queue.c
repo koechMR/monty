@@ -2,7 +2,7 @@
 /**
  * f_queue - prints the top
  * @head: stack head
- * @counter: line_number
+ * @counter: line number
  * Return: return nothing
 */
 void f_queue(stack_t **head, unsigned int counter)
@@ -13,16 +13,16 @@ void f_queue(stack_t **head, unsigned int counter)
 }
 
 /**
- * addqueue - add node to the tail stack
- * @n: new_value
+ * addqueue - add nodes to the tail stack
+ * @n: new value
  * @head: head of the stack
  * Return: return nothing
 */
 void addqueue(stack_t **head, int n)
 {
-	stack_t *new_node, *aux;
+	stack_t *new_node, *pg;
 
-	aux = *head;
+	pg = *head;
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
 	{
@@ -30,19 +30,19 @@ void addqueue(stack_t **head, int n)
 	}
 	new_node->n = n;
 	new_node->next = NULL;
-	if (aux)
+	if (pg)
 	{
-		while (aux->next)
-			aux = aux->next;
+		while (pg->next)
+			pg = pg->next;
 	}
-	if (!aux)
+	if (!pg)
 	{
 		*head = new_node;
 		new_node->prev = NULL;
 	}
 	else
 	{
-		aux->next = new_node;
-		new_node->prev = aux;
+		pg->next = new_node;
+		new_node->prev = pg;
 	}
 }
